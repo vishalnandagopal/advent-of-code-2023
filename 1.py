@@ -1,7 +1,9 @@
+# https://adventofcode.com/2023/day/1
+
 from os.path import dirname
 
 with open(dirname(__file__) + "./input.txt", "r") as f:
-    test_cases = [line.strip() for line in f.readlines()]
+    test_cases = [line.strip() for line in f.readlines() if line]
 
 
 words_to_num = [
@@ -16,8 +18,8 @@ words_to_num = [
     "eight",
     "nine",
 ]
-sumi = 0
 
+sumi = 0
 
 def f(test_case):
     global sumi
